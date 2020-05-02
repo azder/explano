@@ -1,0 +1,36 @@
+{
+  "name": "@azhder/explano",
+  "version": "0.0.1",
+  "description": "generate short error messages to explain some problem",
+  "keywords": [
+    "error",
+    "message",
+    "error message"
+  ],
+  "author": "azder <azhder@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.cjs",
+  "exports": {
+    ".": {
+      "import": "./src/index.mjs",
+      "require": "./src/index.cjs"
+    }
+  },
+  "scripts": {
+    "nodemon": "nodemon --experimental-modules --no-warnings $*",
+    "build": "babel src -d src --out-file-extension .cjs",
+    "dev": "babel src -w -d src --out-file-extension .cjs",
+    "test": "jest --watch"
+  },
+  "devDependencies": {
+    "@azhder/eslint-config-azder": "0.0.7",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "eslint": "^6.8.0",
+    "jest": "^25.4.0",
+    "nodemon": "^2.0.3"
+  }
+}
